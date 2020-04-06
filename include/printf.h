@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   kernel.c                                           :+:      :+:    :+:   */
+/*   printf.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blukasho <bodik1w@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/06 18:13:27 by blukasho          #+#    #+#             */
-/*   Updated: 2020/04/06 18:41:08 by blukasho         ###   ########.fr       */
+/*   Created: 2020/04/06 18:41:31 by blukasho          #+#    #+#             */
+/*   Updated: 2020/04/06 18:43:15 by blukasho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <printf.h>
+#ifndef PRINTF_H
+# define PRINTF_H
 
-int		main(void)
-{
-	printf("Wake up, Neo");
-	return (0);
-}
+int		printf(const char *format, ...);
+
+#endif
