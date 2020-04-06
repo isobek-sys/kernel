@@ -6,7 +6,7 @@
 #*   By: blukasho <bodik1w@gmail.com>               +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2020/04/06 18:38:14 by blukasho          #+#    #+#             *#
-#*   Updated: 2020/04/06 20:18:37 by blukasho         ###   ########.fr       *#
+#*   Updated: 2020/04/06 20:25:23 by blukasho         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -76,6 +76,8 @@ GRUB_FOLDER = ./boot
 
 all: $(BIN_NAME)
 
+$(HDD_IMG): image
+
 image: $(BIN_NAME)
 	$(info Creating $(HDD_IMG))
 	@dd if=/dev/zero of=./$(HDD_IMG) bs=1$(UNITS) count=$(HDD_SIZE) status=progress 2>$(DEV_NULL)
@@ -110,7 +112,7 @@ image: $(BIN_NAME)
 	$(info Umount $(DEV_LOOP1) from block device)
 	@losetup -d $(DEV_LOOP1)
 
-run: $(OBJ_DIR) $(PROJECT_NAME) $(HDD_IMG)
+run: $(OBJ_DIR) $(BIN_NAME) $(HDD_IMG)
 	@qemu-system-i386 -hda $(HDD_IMG)
 
 $(BIN_NAME): $(OBJ_DIR) $(OBJ_KERNEL) $(OBJ_ASM)
