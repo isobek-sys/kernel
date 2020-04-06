@@ -1,0 +1,10 @@
+This little kernel.
+Need install grub && qemu
+
+sudo apt-get install grub 
+sudo apt-get install qemu
+
+In kernel:
+
+make
+sudo make run
