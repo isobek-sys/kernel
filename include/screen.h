@@ -6,7 +6,7 @@
 /*   By: blukasho <bodik1w@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/07 08:41:44 by blukasho          #+#    #+#             */
-/*   Updated: 2020/04/07 14:00:58 by blukasho         ###   ########.fr       */
+/*   Updated: 2020/04/08 08:26:14 by blukasho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,8 @@
 ** Default print colors
 */
 
-# define BACKGROUND_COLOR	0x1
-# define SYMBOL_COLOR		0xF
+# define BACKGROUND_COLOR	0x0
+# define SYMBOL_COLOR		0x2
 # define DEFAULT_COLOR		(((((0x00 | BLINK) << 3) | BACKGROUND_COLOR) << 4) | SYMBOL_COLOR)
 
 static unsigned short	__curr_col;
@@ -66,5 +66,11 @@ static unsigned short	__curr_row;
 
 # define PUT(c) (((unsigned short *) VGA_MEM)[__curr_row * MAX_COL + \
 						__curr_col] = (DEFAULT_COLOR << 8) | (c))
+
+/*
+** Fill screen empty space
+*/
+
+void	clear_screen(void);
 
 #endif

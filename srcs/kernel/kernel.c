@@ -6,7 +6,7 @@
 /*   By: blukasho <bodik1w@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/06 18:13:27 by blukasho          #+#    #+#             */
-/*   Updated: 2020/04/06 18:41:08 by blukasho         ###   ########.fr       */
+/*   Updated: 2020/04/08 08:26:14 by blukasho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int		main(void)
 {
-	printf("Wake up, Neo");
+	clear_screen();
+	printf("Wake up, Neo...");
 	return (0);
 }

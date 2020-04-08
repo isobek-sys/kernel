@@ -6,7 +6,7 @@
 #*   By: blukasho <bodik1w@gmail.com>               +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2020/04/06 18:38:14 by blukasho          #+#    #+#             *#
-#*   Updated: 2020/04/06 20:25:23 by blukasho         ###   ########.fr       *#
+#*   Updated: 2020/04/08 08:25:10 by blukasho         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -20,13 +20,13 @@ GCC = gcc
 
 # kernel parameters
 
-SRCS_KERNEL = kernel.c printf.c
+SRCS_KERNEL = kernel.c printf.c putchar.c screen.c
 
 SRCS_KERNEL_DIR = srcs/kernel/
 
 OBJ_KERNEL = $(addprefix $(OBJ_DIR), $(SRCS_KERNEL:.c=.o))
 
-GCC_KERNEL_FLAGS = -Iinclude -m32 -nostdlib # -nostdlib not search std lib for linking, -nostinc not search header file in standart dirs
+GCC_KERNEL_FLAGS = -Iinclude -m32 -nostdlib -fno-builtin # -nostdlib not search std lib for linking, -nostinc not search header file in standart dirs
 
 # asm parameters
 
