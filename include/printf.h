@@ -6,12 +6,14 @@
 /*   By: blukasho <bodik1w@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/06 18:41:31 by blukasho          #+#    #+#             */
-/*   Updated: 2020/04/06 19:23:34 by blukasho         ###   ########.fr       */
+/*   Updated: 2020/04/07 08:55:38 by blukasho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRINTF_H
 # define PRINTF_H
+
+# include <screen.h>
 
 int		printf(const char *format, ...);
 
